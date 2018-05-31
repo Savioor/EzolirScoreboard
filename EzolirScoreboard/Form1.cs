@@ -392,9 +392,20 @@ namespace EzolirScoreboard
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            GlobalData.get.display.Activate();
-            GlobalData.get.display.Show();
-            GlobalData.get.display.updateScores();
+            try
+            {
+                GlobalData.get.display.Activate();
+                GlobalData.get.display.scoresUpdater.Enabled = true;
+                GlobalData.get.display.Show();
+                GlobalData.get.display.updateScores();
+            } catch (ObjectDisposedException)
+            {
+                GlobalData.get.recreateDisplay();
+                GlobalData.get.display.Activate();
+                GlobalData.get.display.scoresUpdater.Enabled = true;
+                GlobalData.get.display.Show();
+                GlobalData.get.display.updateScores();
+            }
         }
 
         private void removeBonus_Click(object sender, EventArgs e)
@@ -446,6 +457,12 @@ namespace EzolirScoreboard
                 }
             }
             catch (IndexOutOfRangeException) { }
+        }
+
+        private void hideScores_Click(object sender, EventArgs e)
+        {
+            GlobalData.get.display.scoresUpdater.Enabled = false;
+            GlobalData.get.display.Hide();
         }
     }
 }

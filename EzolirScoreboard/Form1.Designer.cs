@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1234",
             "testTeam",
             "100",
@@ -107,6 +107,7 @@
             this.matchToBonus = new System.Windows.Forms.NumericUpDown();
             this.bonusAdd = new System.Windows.Forms.Button();
             this.removeBonus = new System.Windows.Forms.Button();
+            this.hideScores = new System.Windows.Forms.Button();
             this.mainWindow.SuspendLayout();
             this.Scoreboard.SuspendLayout();
             this.ScoreInp.SuspendLayout();
@@ -145,6 +146,7 @@
             // 
             // Scoreboard
             // 
+            this.Scoreboard.Controls.Add(this.hideScores);
             this.Scoreboard.Controls.Add(this.removeBonus);
             this.Scoreboard.Controls.Add(this.bonusAdd);
             this.Scoreboard.Controls.Add(this.matchToBonus);
@@ -758,9 +760,9 @@
             this.totalScore,
             this.gateScore,
             this.bonusScore});
-            listViewItem2.StateImageIndex = 0;
+            listViewItem1.StateImageIndex = 0;
             this.teams.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.teams.Location = new System.Drawing.Point(321, 20);
             this.teams.Name = "teams";
             this.teams.Size = new System.Drawing.Size(542, 472);
@@ -868,6 +870,16 @@
             this.removeBonus.Text = "Remove bonus for track";
             this.removeBonus.UseVisualStyleBackColor = true;
             this.removeBonus.Click += new System.EventHandler(this.removeBonus_Click);
+            // 
+            // hideScores
+            // 
+            this.hideScores.Location = new System.Drawing.Point(330, 66);
+            this.hideScores.Name = "hideScores";
+            this.hideScores.Size = new System.Drawing.Size(180, 54);
+            this.hideScores.TabIndex = 4;
+            this.hideScores.Text = "Hide Scores";
+            this.hideScores.UseVisualStyleBackColor = true;
+            this.hideScores.Click += new System.EventHandler(this.hideScores_Click);
             // 
             // Form1
             // 
@@ -980,6 +992,7 @@
         private System.Windows.Forms.Button removeBonus;
         private System.Windows.Forms.Button bonusAdd;
         private System.Windows.Forms.NumericUpDown matchToBonus;
+        private System.Windows.Forms.Button hideScores;
     }
 }
 

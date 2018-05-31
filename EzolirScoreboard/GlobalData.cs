@@ -14,7 +14,7 @@ namespace EzolirScoreboard
 
         public List<Match> matches { get; }
 
-        public DisplayToCrowd display { get; }
+        public DisplayToCrowd display { get; set; }
 
         private static GlobalData inct;
 
@@ -28,6 +28,11 @@ namespace EzolirScoreboard
         {
             teams = new List<Team>();
             matches = new List<Match>();
+            display = new DisplayToCrowd();
+        }
+
+        public void recreateDisplay()
+        {
             display = new DisplayToCrowd();
         }
 
