@@ -40,7 +40,7 @@ namespace EzolirScoreboard
             MessageBox.Show("Team #" + teamNum + " \"" + teamName + "\" was added!", "Success");
 
             updateTeamView();
-
+            GlobalData.get.display.updateScores();
         }
 
         private void updateTeamView()
@@ -230,6 +230,7 @@ namespace EzolirScoreboard
             }
 
             updateTeamView();
+            GlobalData.get.display.updateScores();
             addTeamsTest1.Enabled = false;
         }
 
@@ -381,6 +382,7 @@ namespace EzolirScoreboard
             match.setScores(toSet);
 
             updateRegisterdMatches();
+            GlobalData.get.display.updateScores();
         }
 
         private void addMatches_Click(object sender, EventArgs e)
@@ -392,6 +394,7 @@ namespace EzolirScoreboard
         {
             GlobalData.get.display.Activate();
             GlobalData.get.display.Show();
+            GlobalData.get.display.updateScores();
         }
 
         private void removeBonus_Click(object sender, EventArgs e)

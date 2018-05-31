@@ -22,6 +22,7 @@ namespace EzolirScoreboard
         private Label[] track3;
         private Label[] bonus;
         private GroupBox[] boxes;
+        private Object LOCK = new Object();
 
         public DisplayToCrowd()
         {
@@ -80,59 +81,116 @@ namespace EzolirScoreboard
         private int cycle = 0;
         private bool cycleOver = false;
 
-        private void scoresUpdater_Tick(object sender, EventArgs e)
+        public void updateScores()
         {
-            List<Team> rankings = GlobalData.get.getRankedTeams();
-            for(int i = cycle*8; i < (cycle + 1)*8; i++)
+            lock (LOCK)
             {
-                place[i % 8].Text = (i + 1).ToString();
-                if (i >= rankings.Count)
+                List<Team> rankings = GlobalData.get.getRankedTeams();
+                for (int i = cycle * 8; i < (cycle + 1) * 8; i++)
                 {
-                    team[i % 8].Text = "N/A";
-                    number[i % 8].Text = "N/A";
-                    total[i % 8].Text = "N/A";
-                    track1[i % 8].Text = "N/A";
-                    track2[i % 8].Text = "N/A";
-                    track3[i % 8].Text = "N/A";
-                    bonus[i % 8].Text = "N/A";
-                    cycleOver = true;
-                }
-                else
-                {
-                    team[i % 8].Text = rankings[i].name;
-                    number[i % 8].Text = "I" +  rankings[i].number.ToString();
-                    total[i % 8].Text = rankings[i].score.ToString();
-                    try
+                    place[i % 8].Text = (i + 1).ToString();
+                    if (i >= rankings.Count)
                     {
-                        track1[i % 8].Text = ((4 - rankings[i].appearIn.Find((a) => a.trackID == 1).getParticipantsByTeam(rankings[i]).score.place) * 5).ToString();
-                    } catch (NullReferenceException)
-                    {
-                        track1[i % 8].Text = "0";
+                        team[i % 8].Text = "N/A";
+                        number[i % 8].Text = "N/A";
+                        total[i % 8].Text = "N/A";
+                        track1[i % 8].Text = "N/A";
+                        track2[i % 8].Text = "N/A";
+                        track3[i % 8].Text = "N/A";
+                        bonus[i % 8].Text = "N/A";
                     }
-                    try
+                    else
                     {
-                        track2[i % 8].Text = ((4 - rankings[i].appearIn.Find((a) => a.trackID == 2).getParticipantsByTeam(rankings[i]).score.place) * 5).ToString();
+                        team[i % 8].Text = rankings[i].name;
+                        number[i % 8].Text = "I" + rankings[i].number.ToString();
+                        total[i % 8].Text = rankings[i].score.ToString();
+                        try
+                        {
+                            track1[i % 8].Text = ((4 - rankings[i].appearIn.Find((a) => a.trackID == 1).getParticipantsByTeam(rankings[i]).score.place) * 5).ToString();
+                        }
+                        catch (NullReferenceException)
+                        {
+                            track1[i % 8].Text = "0";
+                        }
+                        try
+                        {
+                            track2[i % 8].Text = ((4 - rankings[i].appearIn.Find((a) => a.trackID == 2).getParticipantsByTeam(rankings[i]).score.place) * 5).ToString();
+                        }
+                        catch (NullReferenceException)
+                        {
+                            track2[i % 8].Text = "0";
+                        }
+                        try
+                        {
+                            track3[i % 8].Text = ((4 - rankings[i].appearIn.Find((a) => a.trackID == 3).getParticipantsByTeam(rankings[i]).score.place) * 5).ToString();
+                        }
+                        catch (NullReferenceException)
+                        {
+                            track3[i % 8].Text = "0";
+                        }
+                        bonus[i % 8].Text = rankings[i].bonusPoints.ToString();
                     }
-                    catch (NullReferenceException)
-                    {
-                        track2[i % 8].Text = "0";
-                    }
-                    try
-                    {
-                        track3[i % 8].Text = ((4 - rankings[i].appearIn.Find((a) => a.trackID == 3).getParticipantsByTeam(rankings[i]).score.place) * 5).ToString();
-                    }
-                    catch (NullReferenceException)
-                    {
-                        track3[i % 8].Text = "0";
-                    }
-                    bonus[i % 8].Text = rankings[i].bonusPoints.ToString();
                 }
             }
-            cycle++;
-            if (cycleOver)
+        }
+
+        private void scoresUpdater_Tick(object sender, EventArgs e)
+        {
+            lock (LOCK)
             {
-                cycle = 0;
-                cycleOver = false;
+                List<Team> rankings = GlobalData.get.getRankedTeams();
+                for (int i = cycle * 8; i < (cycle + 1) * 8; i++)
+                {
+                    place[i % 8].Text = (i + 1).ToString();
+                    if (i >= rankings.Count)
+                    {
+                        team[i % 8].Text = "N/A";
+                        number[i % 8].Text = "N/A";
+                        total[i % 8].Text = "N/A";
+                        track1[i % 8].Text = "N/A";
+                        track2[i % 8].Text = "N/A";
+                        track3[i % 8].Text = "N/A";
+                        bonus[i % 8].Text = "N/A";
+                        cycleOver = true;
+                    }
+                    else
+                    {
+                        team[i % 8].Text = rankings[i].name;
+                        number[i % 8].Text = "I" + rankings[i].number.ToString();
+                        total[i % 8].Text = rankings[i].score.ToString();
+                        try
+                        {
+                            track1[i % 8].Text = ((4 - rankings[i].appearIn.Find((a) => a.trackID == 1).getParticipantsByTeam(rankings[i]).score.place) * 5).ToString();
+                        }
+                        catch (NullReferenceException)
+                        {
+                            track1[i % 8].Text = "0";
+                        }
+                        try
+                        {
+                            track2[i % 8].Text = ((4 - rankings[i].appearIn.Find((a) => a.trackID == 2).getParticipantsByTeam(rankings[i]).score.place) * 5).ToString();
+                        }
+                        catch (NullReferenceException)
+                        {
+                            track2[i % 8].Text = "0";
+                        }
+                        try
+                        {
+                            track3[i % 8].Text = ((4 - rankings[i].appearIn.Find((a) => a.trackID == 3).getParticipantsByTeam(rankings[i]).score.place) * 5).ToString();
+                        }
+                        catch (NullReferenceException)
+                        {
+                            track3[i % 8].Text = "0";
+                        }
+                        bonus[i % 8].Text = rankings[i].bonusPoints.ToString();
+                    }
+                }
+                cycle++;
+                if (cycleOver)
+                {
+                    cycle = 0;
+                    cycleOver = false;
+                }
             }
         }
 
