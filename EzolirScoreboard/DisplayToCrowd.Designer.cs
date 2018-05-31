@@ -85,12 +85,12 @@
             this.total8 = new System.Windows.Forms.Label();
             this.number8 = new System.Windows.Forms.Label();
             this.team8 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
+            this.hName = new System.Windows.Forms.Label();
+            this.hNumber = new System.Windows.Forms.Label();
+            this.hTotal = new System.Windows.Forms.Label();
+            this.hBonus = new System.Windows.Forms.Label();
+            this.hPlace = new System.Windows.Forms.Label();
+            this.hScores = new System.Windows.Forms.Label();
             this.track36 = new System.Windows.Forms.Label();
             this.track25 = new System.Windows.Forms.Label();
             this.track24 = new System.Windows.Forms.Label();
@@ -107,9 +107,9 @@
             this.track33 = new System.Windows.Forms.Label();
             this.track32 = new System.Windows.Forms.Label();
             this.track31 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label72 = new System.Windows.Forms.Label();
-            this.label73 = new System.Windows.Forms.Label();
+            this.hTrack1 = new System.Windows.Forms.Label();
+            this.hTrack2 = new System.Windows.Forms.Label();
+            this.hTrack3 = new System.Windows.Forms.Label();
             this.scoresUpdater = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -141,6 +141,8 @@
             // 
             // bonus1
             // 
+            this.bonus1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bonus1.AutoSize = true;
             this.bonus1.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bonus1.Location = new System.Drawing.Point(982, 16);
@@ -151,6 +153,8 @@
             // 
             // track11
             // 
+            this.track11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.track11.AutoSize = true;
             this.track11.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.track11.Location = new System.Drawing.Point(660, 16);
@@ -161,6 +165,8 @@
             // 
             // place1
             // 
+            this.place1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.place1.AutoSize = true;
             this.place1.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.place1.Location = new System.Drawing.Point(6, 16);
@@ -171,6 +177,8 @@
             // 
             // total1
             // 
+            this.total1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.total1.AutoSize = true;
             this.total1.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.total1.Location = new System.Drawing.Point(548, 16);
@@ -181,6 +189,8 @@
             // 
             // number1
             // 
+            this.number1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.number1.AutoSize = true;
             this.number1.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.number1.Location = new System.Drawing.Point(395, 16);
@@ -191,6 +201,8 @@
             // 
             // team1
             // 
+            this.team1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.team1.AutoSize = true;
             this.team1.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.team1.Location = new System.Drawing.Point(109, 16);
@@ -746,65 +758,77 @@
             this.team8.TabIndex = 0;
             this.team8.Text = "SomeTeam";
             // 
-            // label49
+            // hName
             // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.Location = new System.Drawing.Point(154, 40);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(85, 32);
-            this.label49.TabIndex = 6;
-            this.label49.Text = "Name";
+            this.hName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hName.AutoSize = true;
+            this.hName.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hName.Location = new System.Drawing.Point(154, 40);
+            this.hName.Name = "hName";
+            this.hName.Size = new System.Drawing.Size(85, 32);
+            this.hName.TabIndex = 6;
+            this.hName.Text = "Name";
             // 
-            // label50
+            // hNumber
             // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(440, 40);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(32, 32);
-            this.label50.TabIndex = 8;
-            this.label50.Text = "#";
+            this.hNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hNumber.AutoSize = true;
+            this.hNumber.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hNumber.Location = new System.Drawing.Point(440, 40);
+            this.hNumber.Name = "hNumber";
+            this.hNumber.Size = new System.Drawing.Size(32, 32);
+            this.hNumber.TabIndex = 8;
+            this.hNumber.Text = "#";
             // 
-            // label51
+            // hTotal
             // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(595, 40);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(77, 32);
-            this.label51.TabIndex = 9;
-            this.label51.Text = "Total";
+            this.hTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hTotal.AutoSize = true;
+            this.hTotal.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hTotal.Location = new System.Drawing.Point(595, 40);
+            this.hTotal.Name = "hTotal";
+            this.hTotal.Size = new System.Drawing.Size(77, 32);
+            this.hTotal.TabIndex = 9;
+            this.hTotal.Text = "Total";
             // 
-            // label53
+            // hBonus
             // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(1027, 40);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(92, 32);
-            this.label53.TabIndex = 11;
-            this.label53.Text = "Bonus";
+            this.hBonus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hBonus.AutoSize = true;
+            this.hBonus.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hBonus.Location = new System.Drawing.Point(1027, 40);
+            this.hBonus.Name = "hBonus";
+            this.hBonus.Size = new System.Drawing.Size(92, 32);
+            this.hBonus.TabIndex = 11;
+            this.hBonus.Text = "Bonus";
             // 
-            // label54
+            // hPlace
             // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label54.Location = new System.Drawing.Point(39, 40);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(81, 32);
-            this.label54.TabIndex = 12;
-            this.label54.Text = "Place";
+            this.hPlace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hPlace.AutoSize = true;
+            this.hPlace.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hPlace.Location = new System.Drawing.Point(39, 40);
+            this.hPlace.Name = "hPlace";
+            this.hPlace.Size = new System.Drawing.Size(81, 32);
+            this.hPlace.TabIndex = 12;
+            this.hPlace.Text = "Place";
             // 
-            // label55
+            // hScores
             // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label55.Location = new System.Drawing.Point(795, -3);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(95, 32);
-            this.label55.TabIndex = 13;
-            this.label55.Text = "Scores";
+            this.hScores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hScores.AutoSize = true;
+            this.hScores.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hScores.Location = new System.Drawing.Point(821, -2);
+            this.hScores.Name = "hScores";
+            this.hScores.Size = new System.Drawing.Size(95, 32);
+            this.hScores.TabIndex = 13;
+            this.hScores.Text = "Scores";
             // 
             // track36
             // 
@@ -858,6 +882,8 @@
             // 
             // track21
             // 
+            this.track21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.track21.AutoSize = true;
             this.track21.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.track21.Location = new System.Drawing.Point(776, 16);
@@ -958,6 +984,8 @@
             // 
             // track31
             // 
+            this.track31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.track31.AutoSize = true;
             this.track31.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.track31.Location = new System.Drawing.Point(882, 16);
@@ -966,36 +994,42 @@
             this.track31.TabIndex = 20;
             this.track31.Text = "1234";
             // 
-            // label71
+            // hTrack1
             // 
-            this.label71.AutoSize = true;
-            this.label71.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label71.Location = new System.Drawing.Point(705, 40);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(102, 32);
-            this.label71.TabIndex = 21;
-            this.label71.Text = "track 1";
+            this.hTrack1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hTrack1.AutoSize = true;
+            this.hTrack1.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hTrack1.Location = new System.Drawing.Point(705, 40);
+            this.hTrack1.Name = "hTrack1";
+            this.hTrack1.Size = new System.Drawing.Size(102, 32);
+            this.hTrack1.TabIndex = 21;
+            this.hTrack1.Text = "track 1";
             // 
-            // label72
+            // hTrack2
             // 
-            this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label72.Location = new System.Drawing.Point(821, 40);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(102, 32);
-            this.label72.TabIndex = 22;
-            this.label72.Text = "track 2";
+            this.hTrack2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hTrack2.AutoSize = true;
+            this.hTrack2.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hTrack2.Location = new System.Drawing.Point(821, 40);
+            this.hTrack2.Name = "hTrack2";
+            this.hTrack2.Size = new System.Drawing.Size(102, 32);
+            this.hTrack2.TabIndex = 22;
+            this.hTrack2.Text = "track 2";
             // 
-            // label73
+            // hTrack3
             // 
-            this.label73.AutoSize = true;
-            this.label73.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label73.Location = new System.Drawing.Point(927, 40);
-            this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(102, 32);
-            this.label73.TabIndex = 23;
-            this.label73.Text = "track 3";
-            this.label73.Click += new System.EventHandler(this.label73_Click);
+            this.hTrack3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hTrack3.AutoSize = true;
+            this.hTrack3.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hTrack3.Location = new System.Drawing.Point(927, 40);
+            this.hTrack3.Name = "hTrack3";
+            this.hTrack3.Size = new System.Drawing.Size(102, 32);
+            this.hTrack3.TabIndex = 23;
+            this.hTrack3.Text = "track 3";
+            this.hTrack3.Click += new System.EventHandler(this.label73_Click);
             // 
             // scoresUpdater
             // 
@@ -1007,16 +1041,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 629);
-            this.Controls.Add(this.label73);
-            this.Controls.Add(this.label72);
-            this.Controls.Add(this.label71);
-            this.Controls.Add(this.label55);
-            this.Controls.Add(this.label54);
-            this.Controls.Add(this.label53);
-            this.Controls.Add(this.label51);
-            this.Controls.Add(this.label50);
-            this.Controls.Add(this.label49);
+            this.ClientSize = new System.Drawing.Size(1256, 627);
+            this.Controls.Add(this.hTrack3);
+            this.Controls.Add(this.hTrack2);
+            this.Controls.Add(this.hTrack1);
+            this.Controls.Add(this.hScores);
+            this.Controls.Add(this.hPlace);
+            this.Controls.Add(this.hBonus);
+            this.Controls.Add(this.hTotal);
+            this.Controls.Add(this.hNumber);
+            this.Controls.Add(this.hName);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
@@ -1025,8 +1059,10 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DisplayToCrowd";
             this.Text = "DisplayToCrowd";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1105,12 +1141,12 @@
         private System.Windows.Forms.Label total8;
         private System.Windows.Forms.Label number8;
         private System.Windows.Forms.Label team8;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label hName;
+        private System.Windows.Forms.Label hNumber;
+        private System.Windows.Forms.Label hTotal;
+        private System.Windows.Forms.Label hBonus;
+        private System.Windows.Forms.Label hPlace;
+        private System.Windows.Forms.Label hScores;
         private System.Windows.Forms.Label track31;
         private System.Windows.Forms.Label track21;
         private System.Windows.Forms.Label track32;
@@ -1126,9 +1162,9 @@
         private System.Windows.Forms.Label track17;
         private System.Windows.Forms.Label track28;
         private System.Windows.Forms.Label track18;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.Label hTrack1;
+        private System.Windows.Forms.Label hTrack2;
+        private System.Windows.Forms.Label hTrack3;
         private System.Windows.Forms.Label track36;
         private System.Windows.Forms.Timer scoresUpdater;
         private System.Windows.Forms.Label place5;

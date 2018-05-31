@@ -21,6 +21,7 @@ namespace EzolirScoreboard
         private Label[] track2;
         private Label[] track3;
         private Label[] bonus;
+        private GroupBox[] boxes;
 
         public DisplayToCrowd()
         {
@@ -33,6 +34,37 @@ namespace EzolirScoreboard
             track2 = new Label[] { track21, track22, track23, track24, track25, track26, track27, track28 };
             track3 = new Label[] { track31, track32, track33, track34, track35, track36, track37, track38 };
             bonus = new Label[] { bonus1, bonus2, bonus3, bonus4, bonus5, bonus6, bonus7, bonus8 };
+            boxes = new GroupBox[] { groupBox1, groupBox2, groupBox3, groupBox4, groupBox5, groupBox6, groupBox7, groupBox8 };
+
+            int width = Screen.PrimaryScreen.Bounds.Width;
+            int boxWidth = width - (width / 10);
+            int boxOver20 = boxWidth / 20;
+
+            for(int i = 0; i < 8; i++)
+            {
+                boxes[i].Top = (Screen.PrimaryScreen.Bounds.Height / 26) * (3 * i + 2);
+                boxes[i].Left = (width / 20);
+                boxes[i].Width = boxWidth;
+                place[i].Left = boxOver20 / 5;
+                team[i].Left = (int)(boxOver20 * 1.3);
+                number[i].Left = boxOver20 * 6;
+                total[i].Left = boxOver20 * 10;
+                track1[i].Left = boxOver20 * 12;
+                track2[i].Left = boxOver20 * 14;
+                track3[i].Left = boxOver20 * 16;
+                bonus[i].Left = boxOver20 * 18;
+            }
+
+            hPlace.Left = (width / 20);
+            hName.Left = (width / 20) + (int)(boxOver20 * 1.3);
+            hNumber.Left = (width / 20) + boxOver20 * 6;
+            hTotal.Left = (width / 20) + boxOver20 * 10;
+            hTrack1.Left = (width / 20) + boxOver20 * 12;
+            hTrack2.Left = (width / 20) + boxOver20 * 14;
+            hScores.Left = (width / 20) + boxOver20 * 14;
+            hTrack3.Left = (width / 20) + boxOver20 * 16;
+            hBonus.Left = (width / 20) + boxOver20 * 18;
+
         }
         // OOOPS
         private void label2_Click(object sender, EventArgs e)
@@ -104,6 +136,7 @@ namespace EzolirScoreboard
             }
         }
 
+        // OOOPS 2
         private void label47_Click(object sender, EventArgs e)
         {
 
